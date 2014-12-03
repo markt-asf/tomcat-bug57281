@@ -19,7 +19,7 @@ class NoopFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response,
             FilterChain chain) throws IOException, ServletException {
-        // NO-OP
+        chain.doFilter(request, response);
     }
 
     @Override
